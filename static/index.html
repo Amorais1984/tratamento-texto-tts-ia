@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Text Editor - Limpeza e Organização</title>
+    <meta name="description" content="Edite e organize textos brutos utilizando IA e as regras da skill.md">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-elements">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-icon">✨</div>
+                <h1>AI Text Editor</h1>
+            </div>
+            <p class="subtitle">Limpeza, Organização e Correção Textual</p>
+        </header>
+
+        <div class="editor-grid">
+            <section class="input-section glass-panel">
+                <div class="section-header">
+                    <h2>Texto Original</h2>
+                    <span class="badge">Entrada</span>
+                </div>
+                <textarea id="inputText" placeholder="Cole aqui seu texto desorganizado, sem pontuação ou com erros ortográficos..."></textarea>
+                <div class="action-bar">
+                    <button id="processBtn" class="primary-btn">
+                        <span class="btn-text">Organizar Texto</span>
+                        <div class="spinner hidden"></div>
+                    </button>
+                    <button id="clearBtn" class="secondary-btn">Limpar</button>
+                </div>
+            </section>
+
+            <section class="output-section glass-panel">
+                <div class="section-header">
+                    <h2>Texto Processado</h2>
+                    <span class="badge success">Saída</span>
+                </div>
+                <div id="outputText" class="output-container" placeholder="O texto organizado aparecerá aqui...">
+                    <div class="empty-state">O texto editado aparecerá aqui.</div>
+                </div>
+                <div class="action-bar">
+                    <button id="copyBtn" class="secondary-btn" disabled>Copiar Resultado</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
